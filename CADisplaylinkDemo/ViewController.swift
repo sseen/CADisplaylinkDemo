@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         lblName.text = "\(content)"
         self.displaylink = CADisplayLink(target: self, selector: #selector(updateText) )
-        //displaylink.preferredFramesPerSecond = 1
-        displaylink.frameInterval = 1
+        displaylink.preferredFramesPerSecond = 1
+        //displaylink.frameInterval = 1
         //displaylink.isPaused = true
         displaylink.add(to: RunLoop.current, forMode: .commonModes)
 
@@ -36,7 +36,8 @@ class ViewController: UIViewController {
     }
     
     func startAnimation() {
-        displaylink.isPaused = false
+        content += 100
+        //displaylink.isPaused = false
     }
     
     func stopAnimation() {
